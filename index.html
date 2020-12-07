@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <title>Canadian Unemployment</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="#" />
+	</head>
+	<body>
+        <div class="content">
+        <h1>Canadian Unemployment Trends</h1>
+        <div class="introText">
+            <p>Canadian unemployment rate trends over time.</p>
+            <p>Sources: Statistics Canada (Unemployment rates), CD Howe (Recession years)</p>
+        </div>
+        <div class='buttons'>
+            <div class="buttonrow1">
+                <button type="button" id="overall" class="selectedButton" onclick="setOptions('null')">Overall</button>
+                <span style="margin-left:25px;">Gender: </span>
+                <button type="button" id="M" onclick="setOptions('M')">Men</button>
+                <button type="button" id="F" onclick="setOptions('F')">Women</button>
+                <span style="margin-left:25px;">Age: </span>
+                <button type="button" id="years15to24" onclick="setOptions('years15to24')">15 - 24</button>
+                <button type="button" id="years25to54" onclick="setOptions('years25to54')">25 - 54</button>
+                <button type="button" id="years55andover" onclick="setOptions('years55andover')">55+</button>
+            </div>
+            <div class="buttonrow2">
+                <span>Province: </span>
+                <button type="button" id="AB" onclick="setOptions('AB')">AB</button>
+                <button type="button" id="BC" onclick="setOptions('BC')">BC</button>
+                <button type="button" id="MB" onclick="setOptions('MB')">MB</button>
+                <button type="button" id="NB" onclick="setOptions('NB')">NB</button>
+                <button type="button" id="NL" onclick="setOptions('NL')">NL</button>
+                <button type="button" id="NS" onclick="setOptions('NS')">NS</button>
+                <button type="button" id="ON" onclick="setOptions('ON')">ON</button>
+                <button type="button" id="PE" onclick="setOptions('PE')">PE</button>
+                <button type="button" id="QC" onclick="setOptions('QC')">QC</button>
+                <button type="button" id="SK" onclick="setOptions('SK')">SK</button>
+            </div>
+        </div>
+        
+
+            <svg id="lineChart" height="150" width="876">
+            </svg>
+
+            <div class="hmLegend">
+                <div>Legend</div>
+                <div class="hmLegendColours">
+                    <div style="background-color: rgb(82, 160, 69);"></div>
+                    <div style="background-color: rgb(99, 188, 81);"></div>
+                    <div style="background-color: rgb(162, 210, 146);"></div>
+                    <div style="background-color: rgb(198, 226, 186);"></div>
+                    <div style="background-color: rgb(238, 226, 189);"></div>
+                    <div style="background-color: rgb(255, 214, 61);"></div>
+                    <div style="background-color: rgb(249, 162, 36);"></div>
+                    <div style="background-color: rgb(238, 58, 67);"></div>
+                    <div style="background-color: rgb(206, 49, 57);"></div>
+                </div>
+                <div class="hmLegendText">
+                    <div>4% or less</div>
+                    <div>11% or more</div>
+                </div>
+            </div>
+
+            <div id="heatMap-container">
+                <div id="heatMap">
+                    <div class="heatmap-month-labels">
+                        <div class="heatmap-month-label" month="0"><p>Jan.</p></div>
+                        <div class="heatmap-month-label" month="1"><p>Feb.</p></div>
+                        <div class="heatmap-month-label" month="2"><p>March</p></div>
+                        <div class="heatmap-month-label" month="3"><p>April</p></div>
+                        <div class="heatmap-month-label" month="4"><p>May</p></div>
+                        <div class="heatmap-month-label" month="5"><p>June</p></div>
+                        <div class="heatmap-month-label" month="6"><p>July</p></div>
+                        <div class="heatmap-month-label" month="7"><p>Aug.</p></div>
+                        <div class="heatmap-month-label" month="8"><p>Sept.</p></div>
+                        <div class="heatmap-month-label" month="9"><p>Oct.</p></div>
+                        <div class="heatmap-month-label" month="10""><p>Nov.</p></div>
+                        <div class="heatmap-month-label" month="11""><p>Dec.</p></div>
+                    </div>
+                    <div class="heatmap-cells" height="300" width="816">
+                        <div class="heatmap-tooltip">
+                            <p class="tooltip-date"></p>
+                            <div class="tooltip-row">
+                                <p class="tooltip-figure"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="decade-labels">
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    <script type="text/javascript" src="d3.js"></script>
+    <script type="text/javascript" src="charts.js"></script>
+    
+</html>
