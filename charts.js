@@ -124,10 +124,10 @@
 
         // Add recession areas, hardcoded based on data
         
-        lineChart.append("rect").attr("height",lineChartHeight).attr("width",17).attr("y",0).attr("x",xScale(new Date(1981,05,01))).attr("fill","lightgrey")
-        lineChart.append("rect").attr("height",lineChartHeight).attr("width",26).attr("y",0).attr("x",xScale(new Date(1990,02,01))).attr("fill","lightgrey")
-        lineChart.append("rect").attr("height",lineChartHeight).attr("width",8).attr("y",0).attr("x",xScale(new Date(2008,09,01))).attr("fill","lightgrey")
-        lineChart.append("rect").attr("height",lineChartHeight).attr("width",9).attr("y",0).attr("x",xScale(new Date(2020,02,01))).attr("fill","lightgrey")
+        lineChart.append("rect").attr("height",lineChartHeight).attr("width",16).attr("y",0).attr("x",xScale(new Date(1981,05,01))).attr("fill","lightgrey")
+        lineChart.append("rect").attr("height",lineChartHeight).attr("width",25).attr("y",0).attr("x",xScale(new Date(1990,02,01))).attr("fill","lightgrey")
+        lineChart.append("rect").attr("height",lineChartHeight).attr("width",7).attr("y",0).attr("x",xScale(new Date(2008,09,01))).attr("fill","lightgrey")
+        lineChart.append("rect").attr("height",lineChartHeight).attr("width",8).attr("y",0).attr("x",xScale(new Date(2020,02,01))).attr("fill","lightgrey")
 
         // Create Overall line details
         let valueline = d3.line()
