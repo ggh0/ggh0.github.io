@@ -147,7 +147,7 @@ button:hover {
 }
 
 .hmLegend {
-  width: 270px;
+  width: 180px;
   margin: 0 auto;
   margin-bottom: 15px;
 }
@@ -157,12 +157,32 @@ button:hover {
 }
 
 .hmLegendColours > * {
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
 }
 
 .hmLegendText {
   display: flex;
   justify-content: space-between;
-  margin-top: 2px;
+}
+
+.hmLegendText > div {
+  font-size: small;
+}
+
+.hmLegendTicks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1px;
+}
+
+.leftTick {
+  height: 5px;
+  width: 1px;
+  border-left: 1px solid black;
+}
+.rightTick {
+  height: 5px;
+  width: 1px;
+  border-right: 1px solid black;
 }
